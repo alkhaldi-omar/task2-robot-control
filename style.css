@@ -1,0 +1,57 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f2f4f7;
+    text-align: center;
+    margin: 0;
+    padding: 30px 16px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* ترتيب الأزرار على شكل علامة + مثل الصورة في المهمة */
+.panel {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-areas:
+        ".    forward  ."
+        "left stop     right"
+        ".    backward .";
+    gap: 20px;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.btn {
+    padding: 12px 0;
+    font-size: 17px;
+    font-weight: bold;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    border-color: #1e88e5;
+    background: #e3f2fd;
+}
+
+.forward  { grid-area: forward; }
+.left     { grid-area: left; }
+.stop     { grid-area: stop; border-color: #e53935; }
+.right    { grid-area: right; }
+.backward { grid-area: backward; }
+
+.stop:hover {
+    border-color: #e53935;
+    background: #ffebee;
+}
+
+#message {
+    font-size: 18px;
+    color: #2e7d32;
+    min-height: 24px;
+}
